@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #EAEAEA ;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#wrapper {
+    background-color: #90c7e3;
+    box-shadow: 3px 3px 3px #333333;
+    background-image: linear-gradient(to bottom, #ffffff, #90c7e3);
+}
+
+
+header {
+    background-color: #002171 ;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+header a:link{
+    color: white;
+}
+
+header a:visited{
+    color: white;
+}
+
+header a:hover{
+    color: #90c7e3;
+}
+
+h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+nav {
+    padding: 0;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+nav li{
+    border-bottom: 1px solid darkblue;
+}
+
+nav a{
+    text-decoration: none;
+    padding-left: .5rem ;
+    padding-right: .5rem;
+    transition: color 3s ease-out;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav a:link {
+    color: #5c7fa3;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover{
+    color: #a52a2a;
+}
+
+main{
+    padding: 1px 20px 20px 30px;
+    display: block;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+main ul{
+    list-style-image: url(image/marker.gif);
+}
+
+
+h2 {
+    color: #1976d2;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-shadow: 1px 1px 1px #cccccc;
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #000033;
+}
+
+/*Reservation*/
+form{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+input, textarea{
+    margin-bottom: .5em;
+}
+
+input{
+    padding: .5em;
+}
+
+
+
+dt {
+    color: #002171;
+}
+
+footer{
+    padding: 2em;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+}
+
+.resort {
+    color: #1976d2;
+    font-weight: bold;
+}
+
+#contact{
+    font-size: 90%;
+}
+
+
+#homehero{
+    height: 300px;
+    background-image: url(image/coast.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#yurthero{
+    height: 300px;
+    background-image: url(image/yurt.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#trailhero{
+    height: 300px;
+    background-image: url(image/trail.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+table{
+    border-spacing: 0;
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 0.5em;
+    border: 2px solid #3399CC;
+}
+
+td{
+    text-align: center;
+}
+
+.text{
+    text-align: left;
+}
+
+tr:nth-last-of-type(odd){
+    background-color: #F5FAFC;
+}
+
+video{
+    float: right;
+    margin: 1em;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    section{
+        margin: 0 2em;
+        flex: 1;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1em;
+    }
+
+    .flow{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #submit{
+        grid-column: 2/3;
+        width: 9em;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid darkblue;
+        box-shadow: 3px 3px 3px darkblue;
+    }
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    @supports (display: grid) {
+        nav ul {
+            flex-direction: column;
+            padding-top: 1em;
+            text-align: left;
+        }
+        header {grid-area: header;}
+        nav {grid-area: nav;}
+        main {grid-area: main;}
+        footer {grid-area: footer;}
+        .hero {grid-area: hero;}
+        footer{grid-area: footer;}
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 100px auto 50px;
+            grid-template: 
+                            "header header" 100px
+                            "nav hero" auto
+                            "nav main" auto
+                            "nav footer" 50px / 180px 1fr;
+        }
+    }
+
+}

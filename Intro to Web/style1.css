@@ -1,0 +1,118 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 60px;
+  }
+  
+  /* Navigation bar */
+  .main-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0073e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    z-index: 1000;
+  }
+  
+  .main-navbar .logo img {
+    height: 40px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-list li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Table */
+  .table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+  }
+  
+  .table-section th,
+  .table-section td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table-section th {
+    background-color: #0073e6;
+    color: white;
+  }
+  
+  /* Media section */
+  .media-section video,
+  .media-section audio {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+  
+  /* Headings */
+  h1, h2 {
+    text-align: center;
+    color: #0073e6;
+    margin-bottom: 20px;
+  }
+  
